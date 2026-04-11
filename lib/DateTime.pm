@@ -3307,6 +3307,15 @@ which it occurs, and the time components are all set to 0. If you truncate to
 C<"local_week">, then the first day of the week is locale-dependent. For
 example, in the C<"en-US"> locale, the first day of the week is Sunday.
 
+B<Note:> Truncation can throw a fatal error if the resulting datetime is
+invalid in the object's time zone. This can happen when a DST transition occurs
+at midnight, causing that local time to not exist. For example, in some time
+zones the clocks spring forward from 00:00 to 01:00, meaning there is no
+midnight on that day.
+
+Unfortunately, this is difficult to work around, because truncating in UTC and
+then changing the time zone will probably not produce the result you want.
+
 =head3 $dt->set_locale($locale)
 
 Sets the object's locale. You can provide either a locale code like C<"en-US">
