@@ -5,6 +5,7 @@ exclude = [
     "MYMETA.yml",
     "blib/**",
     "lib/DateTime/Conflicts.pm",
+    "ppport.h",
     "t/00-*",
     "t/author-*",
     "t/release-*",
@@ -81,7 +82,7 @@ lint-failure-exit-codes = 1
 [commands.typos]
 type = "both"
 include = "**/*"
-exclude = [".stopwords", "ppport.h"]
+exclude = [".stopwords"]
 cmd = "typos"
 tidy_flags = "--write-changes"
 invoke = "once"
