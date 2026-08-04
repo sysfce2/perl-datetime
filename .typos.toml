@@ -1,0 +1,7 @@
+# Contributor surnames, not misspellings.
+# "Portugese" is the old, misspelled name of a language module; the Changes
+# entries record the rename to "Portuguese" and must keep the original spelling.
+[default.extend-words]
+Signes = "Signes"
+Anye = "Anye"
+Portugese = "Portugese"
