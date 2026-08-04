@@ -460,7 +460,7 @@
 
 - The value of ->jd() is now calculated based on ->mjd() instead of the other
   way around. This reduces floating point errors a bit when calculating MJD,
-  and should have a neglible impact on the accuracy of JD. Reported by Anye
+  and should have a negligible impact on the accuracy of JD. Reported by Anye
   Li. RT #92972. See the ticket for a more detailed description of what this
   fixes.
 
@@ -559,7 +559,7 @@
 0.78   2012-11-16
 
 - Reverted the change to round nanoseconds up or down in various
-  situtations. Now we always round down. This avoids the case where rounding
+  situations. Now we always round down. This avoids the case where rounding
   up would require us to then increment the second value (which could then
   require us to increment the minute, which could then require us to increment
   the hour, which could then ...).
@@ -1180,7 +1180,7 @@
 
 [ BUG FIXES ]
 
-- Fixed an embarassing bug in the subtract_datetime() method.  It was
+- Fixed an embarrassing bug in the subtract_datetime() method.  It was
   subtracting local times, not UTC, which caused bugs when doing
   subtraction across a DST change.  This method is used to implement
   subtraction overloading, so that was affected as well.  Reported by
@@ -1743,7 +1743,7 @@
 [ BACKWARDS INCOMPATIBILITIES ]
 
 - The "Portugese" language module has been renamed to "Portuguese".
-  I'm so embarassed!  Reported by Richard Evans.
+  I'm so embarrassed!  Reported by Richard Evans.
 
 - DateTime::Infinite objects no longer die if "set" methods are
   called.  Instead, these methods are now no-op methods that simply
@@ -1797,7 +1797,7 @@
 - A DateTime::Duration object created only with weeks as a parameter
   always was positive.  Fixed by Flavio Glock.
 
-[ BACKWARDS INCOMPATIBILTIES ]
+[ BACKWARDS INCOMPATIBILITIES ]
 
 - Because of changes in DateTime::TimeZone 0.13, which this version
   now requires, when a local time is ambiguous, the latest UTC time is
@@ -1825,7 +1825,7 @@
 - Added complete support for leap seconds (through use of
   DateTime::LeapSecond).  Mostly implemented by Flavio Glock.
 
-[ BACKWARDS INCOMPATIBILTIES ]
+[ BACKWARDS INCOMPATIBILITIES ]
 
 - Because of the addition of leap seconds to the mix, we are now
   forced to handle seconds separately from minutes when doing date
@@ -1954,7 +1954,7 @@
 [BACKWARDS INCOMPATIBILITIES]
 
 - Removed stringification overloading.  Having this in place made it
-  impossible to create a strack trace in much of the time zone code.
+  impossible to create a stack trace in much of the time zone code.
 
 - Renamed the DateTime::Language->subclasses method as languages.
 

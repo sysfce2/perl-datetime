@@ -650,7 +650,7 @@ C<DateTime::Format::Duration> module.
 
 =head2 Overloading
 
-This class overloads addition, subtraction, and mutiplication.
+This class overloads addition, subtraction, and multiplication.
 
 Comparison is B<not> overloaded. If you attempt to compare durations using C<<
 <=> >> or C<cmp>, then an exception will be thrown!  Use the C<compare> class
